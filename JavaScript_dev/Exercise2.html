@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Events!</title>
+</head>
+
+<body>
+    <button onclick="press()">Click me!</button>
+    <p id="user-input"></p>
+    <script>
+        // Your code goes here
+        function press() {
+            var text = prompt("Input a text");
+            if (text == "null" || text == null || text == "") {
+                text = prompt("The text should not be empty");
+            } else {
+                document.getElementById("user-input").innerHTML = text
+            }
+
+        }
+    </script>
+</body>
+
+</html>
