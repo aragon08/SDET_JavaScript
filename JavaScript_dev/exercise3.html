@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercise 3</title>
+    <style>
+        #myDIV {
+            width: 100%;
+            padding: 50px 0;
+            text-align: center;
+            background-color: lightblue;
+            margin-top: 20px;
+            display: none
+        }
+        
+        .btn {
+            font-size: 10px;
+            font-family: Verdana, Helvetica;
+            font-weight: bold;
+            color: white;
+            background: #638cb5;
+            border: 0px;
+            width: 80px;
+            height: 19px;
+        }
+        
+        .btn:hover {
+            font-size: 10px;
+            font-family: Verdana, Helvetica;
+            font-weight: underline;
+            color: black;
+            background: #638cb5;
+            border: 0px;
+            width: 80px;
+            height: 19px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="menu">
+        <button id="button1" onclick="alerted()">Click</button>
+        <button id="button2" onclick="styled()">Click</button>
+        <button class="btn" onmouseover="button.hover">Click</button>
+    </div>
+    <div id="myDIV">
+        This is my DIV element.
+    </div>
+</body>
+<script>
+    function alerted() {
+        alert("You clicked button 1");
+    }
+
+    function styled() {
+        var hddiv = document.getElementById("myDIV");
+        if (hddiv.style.display === "none") {
+            hddiv.style.display = "block"
+        } else {
+            hddiv.style.display = "none"
+        }
+
+    }
+</script>
+
+</html>
