@@ -9,7 +9,8 @@
 </head>
 
 <body>
-    <p id="users_id"></p>
+    <p id="age_id"></p>
+    <p id="user_id"></p>
     <script>
         users = [{
             "name": "Luis",
@@ -28,23 +29,26 @@
             "age": 31
         }];
 
-        users.forEach(function(user) {
+        var ageUsers = users.filter(age);
+        var user = users.filter(name);
+
+        /*function usersA(user) {
             console.log(user)
             document.getElementById("users_id").innerHTML = JSON.stringify(user);
-        });
+        }*/
 
-        function age() {
+        function age(e) {
+            return e.age < 26;
+        }
+        console.log(ageUsers);
+        document.getElementById("age_id").innerHTML = JSON.stringify(ageUsers);
 
+        function name(e) {
+            return (e.name === "Diego");
         }
 
-        function name() {
-            n = users.filter(function(e) {
-                return (e.name === "Diego");
-            });
-        }
-
-        /*age();
-        console.log(name());*/
+        console.log(user);
+        document.getElementById("user_id").innerHTML = JSON.stringify(user);
     </script>
     JavaScript Exercise 1
 
